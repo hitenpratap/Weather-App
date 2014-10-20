@@ -6,6 +6,7 @@ import android.app.FragmentManager;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 
@@ -21,6 +22,11 @@ public class WeatherActivity extends Activity {
         if(savedInstanceState == null){
             getFragmentManager().beginTransaction().add(R.id.container, new WeatherFragment()).commit();
         }
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.weather, menu);
+        return true;
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
