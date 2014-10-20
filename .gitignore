@@ -24,3 +24,9 @@ proguard/
 
 # Log Files
 *.log
+
+HWeather.iml
+HWeather.ipr
+HWeather.iws
+proguard-project.txt
+
