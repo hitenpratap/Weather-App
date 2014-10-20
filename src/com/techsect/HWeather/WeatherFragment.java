@@ -92,7 +92,7 @@ public class WeatherFragment extends Fragment{
             "Humidity: " + main.getString("humidity") + "%" + "\n" +
             "Pressure: " + main.getString("pressure") + " hPa");
 
-            currentTempField.setText(String.format("%0.2f", main.getDouble("temp"))+" ℃");
+            currentTempField.setText(String.format("%.2f", main.getDouble("temp"))+" C");
 
             DateFormat df = DateFormat.getDateTimeInstance();
             String updatedOn = df.format(new Date(json.getLong("dt")*1000));
