@@ -6,10 +6,9 @@
 		<title>HWeather | Right Weather Always</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/jquery.bxslider.css" rel="stylesheet">
         <script src="js/jquery-2.1.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.bxslider.min.js"></script>
+        <script src="js/jquery.slides.min.js"></script>
         <!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -85,7 +84,7 @@
   
   <hr>
 
-    <ul class="bxslider">
+    <ul id="slides">
         <li><img src="images/main%20screen.png" height="500" width="900" title="Simple and discriptive main screen" /></li>
         <li><img src="images/display_screen.png" height="500" width="900" title="main weather display screen with latest temperature information" /></li>
         <li><img src="images/add%20city.png" height="500" width="900" title="Images shows how to add new location to get its temperature" /></li>
@@ -96,11 +95,20 @@
 
 </div> <!-- /container -->
 	<script>
-        $('.bxslider').bxSlider({
-            adaptiveHeight: true,
-            auto:true,
-            mode: 'fade',
-            captions: true
+        $(function(){
+            $("#slides").slidesjs({
+                width: 940,
+                height: 528,
+                navigation: {
+                    active: false
+                },
+                pagination: {
+                    active: false
+                },
+                play:{
+                    auto:true
+                }
+            });
         });
 	</script>
 	</body>
