@@ -21,7 +21,7 @@ public class CityPreference {
     }
 
     void setCity(String city){
-        preferences.edit().putString(SHARED_PREF_CITY_KEY_NAME,city);
+        preferences.edit().putString(SHARED_PREF_CITY_KEY_NAME,city).commit();
     }
 
 }
